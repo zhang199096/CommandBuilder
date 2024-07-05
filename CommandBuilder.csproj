@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03E3A658-3EAD-4DCE-8D66-6BCAA20CD470}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommandBuilder</RootNamespace>
+    <AssemblyName>CommandBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="BLL">
+      <HintPath>..\BLL\bin\Debug\BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="ExpressionEvaluator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=90d9f15d622e2348, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExpressionEvaluator.2.0.4.0\lib\net40\ExpressionEvaluator.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CmdBuilder.cs" />
+    <Compile Include="CmdBuilder01Mission.cs" />
+    <Compile Include="CmdBuilder02Macro.cs" />
+    <Compile Include="CmdBuilder03Parser.cs" />
+    <Compile Include="CmdBuilder2023.cs" />
+    <Compile Include="CommandParser.cs" />
+    <Compile Include="Command\G00.cs" />
+    <Compile Include="Command\G01.cs" />
+    <Compile Include="Command\G02.cs" />
+    <Compile Include="Command\G03.cs" />
+    <Compile Include="Command\G04.cs" />
+    <Compile Include="Command\G100.cs" />
+    <Compile Include="Command\G101.cs" />
+    <Compile Include="Command\G102.cs" />
+    <Compile Include="Command\G103.cs" />
+    <Compile Include="Command\G104.cs" />
+    <Compile Include="Command\G105.cs" />
+    <Compile Include="Command\G106.cs" />
+    <Compile Include="Command\G107.cs" />
+    <Compile Include="Command\G108.cs" />
+    <Compile Include="Command\G109.cs" />
+    <Compile Include="Command\G110.cs" />
+    <Compile Include="Command\G111.cs" />
+    <Compile Include="Command\G112.cs" />
+    <Compile Include="Command\G113.cs" />
+    <Compile Include="Command\G114.cs" />
+    <Compile Include="Command\G115.cs" />
+    <Compile Include="Command\G116.cs" />
+    <Compile Include="Command\G117.cs" />
+    <Compile Include="Command\G118.cs" />
+    <Compile Include="Command\G119.cs" />
+    <Compile Include="Command\G201.cs" />
+    <Compile Include="Command\GError.cs" />
+    <Compile Include="Command\GMark.cs" />
+    <Compile Include="Command\ICmd.cs" />
+    <Compile Include="CommunicationPackage\B0PackagePCGet.cs" />
+    <Compile Include="CommunicationPackage\B0PackagePCPost.cs" />
+    <Compile Include="CommunicationPackage\B1PackagePcPost.cs" />
+    <Compile Include="CommunicationPackage\B3PackagePcPost.cs" />
+    <Compile Include="helper\CharHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SentCMD.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CommunicationPackage\readme.txt" />
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{7b5a676c-0ef2-44af-9188-b4c613b8715b}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
